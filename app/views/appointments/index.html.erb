@@ -1,0 +1,15 @@
+<h1> React Calendar </h1>
+
+<h2> Appointments </h2>
+ 
+<h3> Make a new appointment </h3>
+
+<%= form_for @appointment, remote: true, id: "apt-form" do |f|%>
+   <%= f.text_field :title %>
+   <%= f.text_field :apt_time %>
+   <%= f.submit 'Make appointment', disable_with: "Please Wait..." %>
+<% end %>
+
+<div id="appointments">
+  
+</div>
